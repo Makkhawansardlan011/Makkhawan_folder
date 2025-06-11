@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+  div {
+    margin: 0 250px;
+    padding: 20px;
+  }
+</style>
+<body>
+<div id="content">
+    <h1>แบบฝึกทักษะซ: สร้างแบบฟอร์ม HTML</h1>
+    <p>กรอกข้อมูลตังอย่างตามหัวข้อด้านล่างเพื่อดสอบความเข้าใจเกียวกับ Element และ attribute ต่าง ๆ ของ &lt;form&gt;</p>
+<fieldset>
+    <legend>ข้อมูลส่วนตัว</legend>
+    <form style="float: left;">
+    <label for="ชื่อ-สกุล">ชื่อ-สกุล</label>
+    <input type="text" name="fullname">
+    
+    <label for="gender">เพศ:</label>
+    <input type="radio" name="gender" value="ชาย"> ชาย
+    <input type="radio" name="gender" value="หญิง"> หญิง
+    <input type="radio" name="gender" value="อื่น ๆ"> อื่น ๆ 
+    <label for="วันเกิด">วันเกิด:</label>
+    <input type="date" id="วันเกิด" name="วันเกิด">
+</fieldset>
+
+<fieldset>
+    <legend>ช่องทางติดต่อ</legend>
+    <label for="อีเมล">อีเมล</label>
+    <input type="text" name="อีเมล" placeholder="อีเมล">
+    <label for="เบอร์โทรศัพท์">เบอร์โทรศัพท์</label>
+    <input type="text" id="เบอร์โทรศัพท์" name="เบอร์โทรศัพท์" maxlength="10" size="10" placeholder="123-45-6789" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+    <label for="เว็บไฃต์">เว็บไฃต์</label>
+    <input type="text" name="เว็บไฃต์" id="เว็บไฃต์" placeholder="https://">
+</fieldset>
+
+<fieldset>
+    <legend>ทักษะและความสนใจ</legend>
+    เลือกทักษะที่ถนัด (เลือกได้หลายข้อ)
+    <input type="checkbox" name="เลือกทักษะที่ถนัด" id="HTML"> HTML
+    <input type="checkbox" name="เลือกทักษะที่ถนัด" id="CSS"> CSS
+    <input type="checkbox" name="เลือกทักษะที่ถนัด" id="Javascript"> Javascript
+
+  ระดับความชำนาญด้าน HTML (1-10):
+  <input type="range" name="html_level" min="1" max="10" value="5">
+  5 สิ่งที่ชอบซ: <input type="color" name="fav_color">
+  เบราว์เซอร์ที่ใช้บ่อย: <input type="text" list="browsers" name="browsers">
+  <datalist id="browsers">
+    <option value="Chrome">
+    <option value="Firefox">
+    <option value="Edge">
+    <option value="Safari"> 
+  </datalist>
+</fieldset>
+
+<fieldset>
+    <legend>อื่น ๆ</legend>
+    รูปโปรไฟล์
+    <input type="file" name="profile">
+    ประเทศ 
+    <select name="country">
+      <option value="Thailand">ไทย</option>
+      <option value="Japan">ญี่ปุ่น</option>
+      <option value="USA">สหรัฐอเมริกา</option>
+    </select>
+    <textarea name="about" placeholder="เล่าเกี่ยวกับตัวคุณ" rows="4" cols="40"></textarea>
+  </fieldset>
+
+    <button type="submit">ส่งข้อมูล</button>
+    <button type="reset">ล้างข้อมูล</button>
+    <button type="button">แสดงตัวอย่าง</button>
+
+ </form>
+</div>
+</body>
+</html>
