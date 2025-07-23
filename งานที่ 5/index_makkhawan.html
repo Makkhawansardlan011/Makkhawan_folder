@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Website</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: rgb(233, 255, 212);
+            margin: 0; /* ลบช่องว่างเริ่มต้นของเบราว์เซอร์ */
+        }
+        header {
+            background-color: rgb(139, 255, 177);
+            padding: 30px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+        .container {
+            display: flex; /* ใช้ Flexbox สำหรับเลย์เอาต์หลัก */
+            flex-wrap: wrap; /* ให้รายการสามารถขึ้นบรรทัดใหม่ได้เมื่อหน้าจอเล็ก */
+        }
+        nav {
+            background-color: aqua;
+            padding: 20px;
+            width: 250px; /* กำหนดความกว้างคงที่ให้ส่วน nav */
+        }
+        nav h2 {
+            font-size: 1.2em;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav li {
+            margin-bottom: 10px;
+        }
+        nav a {
+            color: lightslategray;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        article {
+            flex: 1; /* ให้ article ขยายเพื่อเติมเต็มพื้นที่ที่เหลือ */
+            background-color: aquamarine;
+            padding: 20px;
+        }
+        article h2 {
+            margin-top: 0;
+        }
+        /* Media query สำหรับหน้าจอขนาดเล็ก */
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column; /* จัดเรียงรายการในแนวตั้งบนหน้าจอขนาดเล็ก */
+            }
+            nav, article {
+                width: auto; /* ให้ nav และ article มีความกว้างเท่ากับหน้าจอ */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ยินดีต้อนรับสู่เว็บไซต์ของฉัน</h1>
+    </header>
+
+    <div class="container">
+        <nav>
+            <h2>เว็บไซต์ที่ชื่นชอบ</h2>
+            <a href="https://store.steampowered.com/?l=thai">Steam</a>
+            <h2>รายละเอียดส่วนตัว</h2>
+            <ul>
+                <li>วันเกิด: 2 มีนาคม พ.ศ. 2553</li>
+                <li>งานอดิเรก: ชอบวาดรูป</li>
+                <li>อาชีพ: นักเรียน</li>
+                <li>ชอบ: แมว</li>
+                <li>ชาติ: ไทย</li>
+            </ul>
+        </nav>
+
+        <article>
+            <a href="https://www.google.com/imgres?q=%E0%B9%81%E0%B8%A1%E0%B8%A7&imgurl=https%3A%2F%2Fi0.wp.com%2Fwww.xinhuathai.com%2Fwp-content%2Fuploads%2F2024%2F02%2F7507fc8a87b444b69dfa21c7b448c481.jpg%3Fresize%3D696%252C466%26ssl%3D1&imgrefurl=https%3A%2F%2Fwww.xinhuathai.com%2Finter%2F419534_20240218&docid=ouioDhCMMecqjM&tbnid=CVNnoJ8H06wjWM&vet=12ahUKEwiF6_7iu8COAxUSSWwGHbmxAl0QM3oECBkQAA..i&w=696&h=466&hcb=2&ved=2ahUKEwiF6_7iu8COAxUSSWwGHbmxAl0QM3oECBkQAA">
+                <img src="g.webp" alt="7" width:500px;height:600px;>
+            </a>
+        </article>
+    </div>
+
+</body>
+</html>
